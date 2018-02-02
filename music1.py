@@ -1,7 +1,7 @@
 import time
 import pygame.midi
 import heapq
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 class MinPQ:
     def __init__(self):
@@ -30,8 +30,8 @@ class MaxPQ:
 pygame.midi.init()
 player = pygame.midi.Output(0)
 
-coin = 'BTC'
-instrument = 30            # 30 - guitar, 32 - bass, 118 - drums
+coin = 'BCC'
+instrument = 118            # 30 - guitar, 32 - bass, 118 - drums
 channel = 1                 # 114 steel drum, 18 - synth (try 103), 116 - bass drum
 
 player.set_instrument(instrument, channel )
@@ -89,12 +89,13 @@ while True:
     quantities = [t['Quantity'] for t in trades]
     prices = [t['Price'] for t in trades]
 
-    plt.figure(1)
-    plt.subplot(211)
-    plt.hist(quantities, bins=16)
-    plt.subplot(212)
-    plt.hist(prices, bins=21)
-    plt.show()
+
+    #plt.figure(1)
+    #plt.subplot(211)
+    #plt.hist(quantities, bins=16)
+    #plt.subplot(212)
+    #plt.hist(prices, bins=21)
+    #plt.show()
 
     #exit()
 
